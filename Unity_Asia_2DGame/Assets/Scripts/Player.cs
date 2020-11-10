@@ -6,7 +6,12 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         print("碰到傳送門惹");
-        final.SetActive(true);
+        if (collision.name=="傳送門")
+        {
+            final.SetActive(true);
+
+        }
+        
     }
 
 }
